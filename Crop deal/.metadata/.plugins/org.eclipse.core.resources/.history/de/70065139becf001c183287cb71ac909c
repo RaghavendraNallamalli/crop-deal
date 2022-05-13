@@ -1,0 +1,8 @@
+server:
+  port: 8080
+spring:
+  data:
+    mongodb:
+      uri:mongodb+srv://raghavendra:<password>@cropsdeal.3pb5k.mongodb.net/test
+  application:
+    name: FarmerService

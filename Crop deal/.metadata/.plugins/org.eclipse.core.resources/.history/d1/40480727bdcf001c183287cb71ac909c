@@ -1,0 +1,47 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class FarmerService  {
+    @Autowired
+    private FarmerRepository farmerRepository;
+    public List<Farmer> getAllFarmers(){
+        return  farmerRepository.findAll();
+    }
+
+    public Farmer findById(String Id){
+
+        return farmerRepository.findById(Id).get();
+    }
+    public Farmer AddFarmer(Farmer F){
+        //Generate id
+        return  farmerRepository.save(F);
+    }
+
+    public Farmer updateFarmer(Farmer F){
+        if(farmerRepository.existsById(F.getId())){
+            return  farmerRepository.save(F);
+        }
+        else {
+            F.setFirstName("UserNotFound");
+            return F;
+        }
+    }
+    public String deleteById(String Id) {
+
+        if(farmerRepository.existsById(Id)){
+            farmerRepository.deleteById(Id);
+            return "Deleted SuccessFully";
+        }
+
+        else {
+            return "FarmerNotFound";
+        }
+    }
+
+
+}

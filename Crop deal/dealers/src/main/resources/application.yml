@@ -1,0 +1,8 @@
+server:
+  port: 8083
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://raghavendra:power5678@cropsdeal.3pb5k.mongodb.net/dealers
+  application:
+    name: DealerService

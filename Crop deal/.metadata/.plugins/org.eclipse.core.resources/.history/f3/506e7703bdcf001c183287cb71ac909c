@@ -1,0 +1,37 @@
+package com.example.demo;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+@Document(collection = "Farmer")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
+public class Farmer {
+
+    @Transient
+    private static final String SEQUENCE_Name="Farmer_Sequence";
+
+    @MongoId
+    private String id;
+    private String firstName;
+    private String lastName;
+    private String password;
+    private Date dob;
+    private String email;
+    private String address;
+    private Boolean Status;
+
+}
