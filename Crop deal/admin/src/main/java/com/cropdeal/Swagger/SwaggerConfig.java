@@ -31,7 +31,7 @@ public class SwaggerConfig {
                 "This is Documentation for API of Farmer  Microservice",
                 "1.0",
                 "https://www.edgeverve.com/componentlist/assistedge/apache-software-license/",
-                new springfox.documentation.service.Contact("SaiSukumar",
+                new springfox.documentation.service.Contact("N Sri Raghavendra",
                         "https://saisukumarpinninti.github.io/resume/",
                         "saisukumarpinniti+apicropdeal@gmail.com"),
                 "Apache License",

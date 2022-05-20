@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class FarmerService  {
     @Autowired
+    private SequenceGenerator sg;
+    @Autowired
     private FarmerRepository farmerRepository;
     public List<Farmer> getAllFarmers(){
         return  farmerRepository.findAll();
@@ -18,6 +20,7 @@ public class FarmerService  {
         return farmerRepository.findById(Id).get();
     }
     public Farmer AddFarmer(Farmer F){
+        F.setId(sg.getSequenceNumber("Farmer_Sequence"));
         return  farmerRepository.save(F);
     }
 

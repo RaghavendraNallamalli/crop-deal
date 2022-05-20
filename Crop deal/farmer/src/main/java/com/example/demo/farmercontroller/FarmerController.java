@@ -1,8 +1,10 @@
-package com.example.demo;
+package com.example.demo.farmercontroller;
 
 
 import java.util.List;
 
+import com.example.demo.Farmer;
+import com.example.demo.FarmerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

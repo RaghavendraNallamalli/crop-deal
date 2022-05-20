@@ -15,6 +15,8 @@ import java.util.List;
 @Service
 public class DealerService  {
     @Autowired
+    private SequenceGenerator sg;
+    @Autowired
     private DealerRepository DealerRepository;
     @Autowired
 
@@ -43,6 +45,7 @@ public class DealerService  {
 
     //Adds the Dealer into the database
     public Dealer AddDealer(Dealer F){
+        F.setId(sg.getSequenceNumber("Dealer_Sequence"));
 
         //Setting the Status of the Dealer to Active.
         F.setStatus(Boolean.TRUE);

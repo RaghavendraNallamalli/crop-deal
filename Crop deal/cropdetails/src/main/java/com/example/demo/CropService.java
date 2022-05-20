@@ -13,6 +13,8 @@ import java.util.List;
 @Service
 public class CropService  {
     @Autowired
+    private SequenceGenerator sg ;
+    @Autowired
     private CropRepository CropRepository;
 
     @Autowired
@@ -37,6 +39,7 @@ public class CropService  {
     //Adds the Crop into the database
     public Crop AddCrop(Crop F){
         if(farmerService.checkIsFarmer(F.getFarmerid())){
+            F.setId(sg.getSequenceNumber("Crop_Sequence"));
             return  CropRepository.save(F);}
         else{
             F.setName("Farmer DoesNot Exits");

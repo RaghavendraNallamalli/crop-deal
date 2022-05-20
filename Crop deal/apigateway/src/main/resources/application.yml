@@ -1,0 +1,14 @@
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api
+  routes:
+    FarmerService:
+      path: /farmer/**
+      serviceId: FarmerService
+
+server:
+  port: 8079
+
+spring:
+  application:
+    name: zuul-service

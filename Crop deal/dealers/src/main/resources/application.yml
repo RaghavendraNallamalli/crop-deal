@@ -6,3 +6,6 @@ spring:
       uri: mongodb+srv://raghavendra:power5678@cropsdeal.3pb5k.mongodb.net/dealers
   application:
     name: DealerService
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
