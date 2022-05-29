@@ -1,7 +1,5 @@
 package com.example.demo;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -74,6 +72,13 @@ public class CropService  {
             return "CropNotFound";
         }
     }
+    public  List<Crop> getListByFarmer(String farmerId){
+        return CropRepository.getListByfarmerid(farmerId);
+    }
+
+//    public List<Crop> getListByname(String name){
+//        return CropRepository.getListByname(name);
+//    }
 
     //checks & Sends if the Crop exits or not
     public boolean Checkexits(String Id){

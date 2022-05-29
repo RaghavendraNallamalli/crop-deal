@@ -1,0 +1,36 @@
+zuul:
+  prefix: /api
+  routes:
+    FarmerService:
+      path: /farmer/**
+      serviceId: FarmerService
+      url : http://localhost:8082/
+    DealerService:
+      path: /dealer/**
+      serviceId: DealerService
+      url: http://localhost:8083/
+    CropDetailService:
+      path: /crop/**
+      serviceId: CropDetailService
+      url: http://localhost:8081
+    AdminService:
+      path: /Admin/**
+      serviceId: AdminService
+      url: http://localhost:8085
+
+server:
+  port: 9000
+
+spring:
+  application:
+    name: Api-Service
+
+
+eureka:
+  client:
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      preferIpAddress: true
+    register-with-eureka: true
