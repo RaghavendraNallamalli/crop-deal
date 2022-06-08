@@ -1,8 +1,8 @@
-package com.repository;
+package com.example.demo;
 
 
 
-import com.model.Dealer;
+import com.example.demo.Dealer;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

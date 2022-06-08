@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import com.controller.DealerController;
-import com.model.Dealer;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mockito;
@@ -15,7 +13,7 @@ import static org.mockito.Mockito.when;
 class DealerControllerTest {
 
     @InjectMocks
-    public com.controller.DealerController DealerController= Mockito.mock(DealerController.class);
+    public com.example.demo.DealerController DealerController= Mockito.mock(DealerController.class);
 
 
     //Creating A Dealer

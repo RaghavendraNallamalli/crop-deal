@@ -39,6 +39,6 @@ public class Crop {
     private String name;
     private int cost;
     private int quantity;
-    private String type;
+//    private String type;
 
 }

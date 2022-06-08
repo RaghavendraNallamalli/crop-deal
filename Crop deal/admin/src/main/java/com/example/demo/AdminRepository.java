@@ -1,8 +1,8 @@
-package com.repository;
+package com.example.demo;
 
 
 
-import com.model.Admin;
+import com.example.demo.Admin;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

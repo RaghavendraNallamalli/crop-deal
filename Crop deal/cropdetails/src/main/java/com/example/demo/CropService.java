@@ -59,6 +59,9 @@ public class CropService  {
             return F;
         }
     }
+    public List<Crop> getFarmer( String farmerid) {
+        return CropRepository.getListByfarmerid(farmerid);
+    }
 
     //Deletes the Crop data in the database if the Crop exits and returns the Result
     //if the Crop not exits returns the error result

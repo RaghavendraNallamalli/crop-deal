@@ -1,9 +1,7 @@
-package com.controller;
+package com.example.demo;
 
 
 
-import com.model.Dealer;
-import com.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +13,7 @@ import java.util.List;
 public class DealerController {
 
     @Autowired
-    private com.service.DealerService DealerService;
+    private com.example.demo.DealerService DealerService;
 
     //Returns List Of All The Dealers
     @GetMapping("/all")

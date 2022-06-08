@@ -63,7 +63,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 // Open For All
                 .antMatchers("/user/authenticate",
                         "/api/farmer/farmer/add", "/api/dealer/Dealer/delete",
-                        "/api/dealer/Dealer/delete","api/crop/Crop/true/all").permitAll()
+                        "/api/dealer/dealer/add","api/crop/Crop/true/all","/api/Admin/Admin/add").permitAll()
                 .anyRequest().authenticated().and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().cors().configurationSource(corsConfigurationSource());

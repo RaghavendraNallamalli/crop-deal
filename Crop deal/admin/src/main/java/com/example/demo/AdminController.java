@@ -1,9 +1,7 @@
-package com.controller;
+package com.example.demo;
 
 
 
-import com.model.Admin;
-import com.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class AdminController {
 
     @Autowired
-    private com.service.AdminService AdminService;
+    private com.example.demo.AdminService AdminService;
 
     //Returns the data of The Admin by using id
     @GetMapping("/{Id}")

@@ -1,9 +1,6 @@
-package com.service;
+package com.example.demo;
 
 
-import com.model.Admin;
-import com.repository.AdminRepository;
-import com.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

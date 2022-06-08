@@ -1,13 +1,15 @@
-package com.service;
+package com.example.demo;
 
 
+
+import com.example.demo.sequence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
-import com.model.sequence;
+
 import java.util.Objects;
 
 import static org.springframework.data.mongodb.core.FindAndModifyOptions.options;
@@ -29,7 +31,8 @@ public class SequenceGenerator {
         Update u = new Update().inc("seq_No",1);
 
         //Modifying in the Document
-        sequence counter = mongoOperations.findAndModify(q,u,options().returnNew(true).upsert(true),sequence.class);
+        sequence counter = mongoOperations.
+                findAndModify(q,u,options().returnNew(true).upsert(true),sequence.class);
 
         //returning the value returns 1 if there is no such document or will return the sequence number
         return String.valueOf((!Objects.isNull(counter) ? counter.getSeq_No() : 1 ));

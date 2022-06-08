@@ -1,11 +1,9 @@
 package com.example.demo;
-
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/Crop")
 public class CropController {
@@ -41,5 +39,10 @@ public class CropController {
     @DeleteMapping("/delete/{Id}")
     public String deleteCrop(@PathVariable String Id){
         return cropService.deleteById(Id);
+
+    }
+    @GetMapping("/farmercrop/{farmerid}")
+    public List<Crop> getFarmer(@PathVariable String farmerid) {
+        return cropService.getListByFarmer(farmerid);
     }
 }

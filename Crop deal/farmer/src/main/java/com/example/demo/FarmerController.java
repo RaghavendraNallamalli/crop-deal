@@ -1,29 +1,18 @@
-package com.farmercontrol;
-
+package com.example.demo;
 
 import java.util.List;
-
-import com.model.Farmer;
-import com.service.FarmerService;
-import com.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 public class FarmerController {
     @Autowired
     private FarmerService farmerService;
-    @GetMapping("/f")
-    public String s() {
-    	return "hello";
-    }
+//    @GetMapping("/f")
+//    public String s() {
+//    	return "hello";
+//    }
     @GetMapping("/farmers")
     public List<Farmer> getFarmers() {
         return farmerService.getAllFarmers();
@@ -54,6 +43,7 @@ public class FarmerController {
     }
 
     @GetMapping("/farmer/check/{Id}")
-    public Boolean FarmerExits(@PathVariable String Id){return farmerService.Checkexits(Id);}
+    public Boolean FarmerExits(@PathVariable String Id)
+    {return farmerService.Checkexits(Id);}
 
 }

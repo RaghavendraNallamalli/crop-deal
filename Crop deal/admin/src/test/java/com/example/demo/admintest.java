@@ -1,8 +1,6 @@
 package com.example.demo;
 
 
-import com.controller.AdminController;
-import com.model.Admin;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mockito;
@@ -16,7 +14,7 @@ import static org.mockito.Mockito.when;
 class AdminControllerTest {
 
     @InjectMocks
-    public com.controller.AdminController AdminController= Mockito.mock(AdminController.class);
+    public com.example.demo.AdminController AdminController= Mockito.mock(AdminController.class);
 
 
 

@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import com.farmercontrol.FarmerController;
-import com.model.Farmer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

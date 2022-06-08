@@ -1,9 +1,7 @@
-package com.service;
+package com.example.demo;
 
 
 
-import com.model.Dealer;
-import com.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,7 +16,7 @@ public class DealerService  {
     @Autowired
     private SequenceGenerator sg;
     @Autowired
-    private com.repository.DealerRepository DealerRepository;
+    private com.example.demo.DealerRepository DealerRepository;
     @Autowired
 
 
